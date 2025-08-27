@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Bourgeois Medium Condensed';
+    src: url('Bourgeois-MediumCondensedItalic.eot');
+    src: local('Bourgeois Medium Condensed Italic'), local('Bourgeois-MediumCondensedItalic'),
+        url('Bourgeois-MediumCondensedItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-MediumCondensedItalic.woff2') format('woff2'),
+        url('Bourgeois-MediumCondensedItalic.woff') format('woff'),
+        url('Bourgeois-MediumCondensedItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-HeavyItalic.eot');
+    src: local('Bourgeois Heavy Italic'), local('Bourgeois-HeavyItalic'),
+        url('Bourgeois-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-HeavyItalic.woff2') format('woff2'),
+        url('Bourgeois-HeavyItalic.woff') format('woff'),
+        url('Bourgeois-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois Medium Condensed';
+    src: url('Bourgeois-BoldCondensed.eot');
+    src: local('Bourgeois Bold Condensed'), local('Bourgeois-BoldCondensed'),
+        url('Bourgeois-BoldCondensed.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-BoldCondensed.woff2') format('woff2'),
+        url('Bourgeois-BoldCondensed.woff') format('woff'),
+        url('Bourgeois-BoldCondensed.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois Thin Condensed';
+    src: url('Bourgeois-ThinCondensedItalic.eot');
+    src: local('Bourgeois Thin Condensed Italic'), local('Bourgeois-ThinCondensedItalic'),
+        url('Bourgeois-ThinCondensedItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-ThinCondensedItalic.woff2') format('woff2'),
+        url('Bourgeois-ThinCondensedItalic.woff') format('woff'),
+        url('Bourgeois-ThinCondensedItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-BoldItalic.eot');
+    src: local('Bourgeois Bold Italic'), local('Bourgeois-BoldItalic'),
+        url('Bourgeois-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-BoldItalic.woff2') format('woff2'),
+        url('Bourgeois-BoldItalic.woff') format('woff'),
+        url('Bourgeois-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-MediumItalic.eot');
+    src: local('Bourgeois Medium Italic'), local('Bourgeois-MediumItalic'),
+        url('Bourgeois-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-MediumItalic.woff2') format('woff2'),
+        url('Bourgeois-MediumItalic.woff') format('woff'),
+        url('Bourgeois-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-Heavy.eot');
+    src: local('Bourgeois Heavy'), local('Bourgeois-Heavy'),
+        url('Bourgeois-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-Heavy.woff2') format('woff2'),
+        url('Bourgeois-Heavy.woff') format('woff'),
+        url('Bourgeois-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois Thin Condensed';
+    src: url('Bourgeois-LightCondensedItalic.eot');
+    src: local('Bourgeois Light Condensed Italic'), local('Bourgeois-LightCondensedItalic'),
+        url('Bourgeois-LightCondensedItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-LightCondensedItalic.woff2') format('woff2'),
+        url('Bourgeois-LightCondensedItalic.woff') format('woff'),
+        url('Bourgeois-LightCondensedItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois Thin Condensed';
+    src: url('Bourgeois-LightCondensed.eot');
+    src: local('Bourgeois Light Condensed'), local('Bourgeois-LightCondensed'),
+        url('Bourgeois-LightCondensed.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-LightCondensed.woff2') format('woff2'),
+        url('Bourgeois-LightCondensed.woff') format('woff'),
+        url('Bourgeois-LightCondensed.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-Bold.eot');
+    src: local('Bourgeois Bold'), local('Bourgeois-Bold'),
+        url('Bourgeois-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-Bold.woff2') format('woff2'),
+        url('Bourgeois-Bold.woff') format('woff'),
+        url('Bourgeois-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-Light.eot');
+    src: local('Bourgeois Light'), local('Bourgeois-Light'),
+        url('Bourgeois-Light.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-Light.woff2') format('woff2'),
+        url('Bourgeois-Light.woff') format('woff'),
+        url('Bourgeois-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-ThinItalic.eot');
+    src: local('Bourgeois Thin Italic'), local('Bourgeois-ThinItalic'),
+        url('Bourgeois-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-ThinItalic.woff2') format('woff2'),
+        url('Bourgeois-ThinItalic.woff') format('woff'),
+        url('Bourgeois-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois UltraBold Condensed';
+    src: url('Bourgeois-HeavyCondensedItalic.eot');
+    src: local('Bourgeois Heavy Condensed Italic'), local('Bourgeois-HeavyCondensedItalic'),
+        url('Bourgeois-HeavyCondensedItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-HeavyCondensedItalic.woff2') format('woff2'),
+        url('Bourgeois-HeavyCondensedItalic.woff') format('woff'),
+        url('Bourgeois-HeavyCondensedItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-LightItalic.eot');
+    src: local('Bourgeois Light Italic'), local('Bourgeois-LightItalic'),
+        url('Bourgeois-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-LightItalic.woff2') format('woff2'),
+        url('Bourgeois-LightItalic.woff') format('woff'),
+        url('Bourgeois-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-Medium.eot');
+    src: local('Bourgeois Medium'), local('Bourgeois-Medium'),
+        url('Bourgeois-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-Medium.woff2') format('woff2'),
+        url('Bourgeois-Medium.woff') format('woff'),
+        url('Bourgeois-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-Thin.eot');
+    src: local('Bourgeois Thin'), local('Bourgeois-Thin'),
+        url('Bourgeois-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-Thin.woff2') format('woff2'),
+        url('Bourgeois-Thin.woff') format('woff'),
+        url('Bourgeois-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois Medium Condensed';
+    src: url('Bourgeois-BoldCondensedItalic.eot');
+    src: local('Bourgeois Bold Condensed Italic'), local('Bourgeois-BoldCondensedItalic'),
+        url('Bourgeois-BoldCondensedItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-BoldCondensedItalic.woff2') format('woff2'),
+        url('Bourgeois-BoldCondensedItalic.woff') format('woff'),
+        url('Bourgeois-BoldCondensedItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois UltraBold Condensed';
+    src: url('Bourgeois-HeavyCondensed.eot');
+    src: local('Bourgeois Heavy Condensed'), local('Bourgeois-HeavyCondensed'),
+        url('Bourgeois-HeavyCondensed.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-HeavyCondensed.woff2') format('woff2'),
+        url('Bourgeois-HeavyCondensed.woff') format('woff'),
+        url('Bourgeois-HeavyCondensed.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois Medium Condensed';
+    src: url('Bourgeois-MediumCondensed.eot');
+    src: local('Bourgeois Medium Condensed'), local('Bourgeois-MediumCondensed'),
+        url('Bourgeois-MediumCondensed.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-MediumCondensed.woff2') format('woff2'),
+        url('Bourgeois-MediumCondensed.woff') format('woff'),
+        url('Bourgeois-MediumCondensed.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois Thin Condensed';
+    src: url('Bourgeois-ThinCondensed.eot');
+    src: local('Bourgeois Thin Condensed'), local('Bourgeois-ThinCondensed'),
+        url('Bourgeois-ThinCondensed.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-ThinCondensed.woff2') format('woff2'),
+        url('Bourgeois-ThinCondensed.woff') format('woff'),
+        url('Bourgeois-ThinCondensed.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-UltraBoldItalic.eot');
+    src: local('Bourgeois UltraBold Italic'), local('Bourgeois-UltraBoldItalic'),
+        url('Bourgeois-UltraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-UltraBoldItalic.woff2') format('woff2'),
+        url('Bourgeois-UltraBoldItalic.woff') format('woff'),
+        url('Bourgeois-UltraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois';
+    src: url('Bourgeois-UltraBold.eot');
+    src: local('Bourgeois UltraBold'), local('Bourgeois-UltraBold'),
+        url('Bourgeois-UltraBold.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-UltraBold.woff2') format('woff2'),
+        url('Bourgeois-UltraBold.woff') format('woff'),
+        url('Bourgeois-UltraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois UltraBold Condensed';
+    src: url('Bourgeois-UltraBoldCondensed.eot');
+    src: local('Bourgeois UltraBold Condensed'), local('Bourgeois-UltraBoldCondensed'),
+        url('Bourgeois-UltraBoldCondensed.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-UltraBoldCondensed.woff2') format('woff2'),
+        url('Bourgeois-UltraBoldCondensed.woff') format('woff'),
+        url('Bourgeois-UltraBoldCondensed.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bourgeois UltraBold Condensed';
+    src: url('Bourgeois-UltraBoldCondensedItalic.eot');
+    src: local('Bourgeois UltraBold Condensed Italic'), local('Bourgeois-UltraBoldCondensedItalic'),
+        url('Bourgeois-UltraBoldCondensedItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bourgeois-UltraBoldCondensedItalic.woff2') format('woff2'),
+        url('Bourgeois-UltraBoldCondensedItalic.woff') format('woff'),
+        url('Bourgeois-UltraBoldCondensedItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
