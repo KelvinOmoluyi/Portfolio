@@ -1,26 +1,363 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+    /* --main-color:rgb(4, 4, 20); */
+    --main-color: #000000;
+    --main-color-02: #161616;
+    --main-color-03: white;
+    --main-color-04: #bdbdbd;
+    --main-color-05: #161616;
+    --main-color-06: #292929;
+    --word-color: #cccccc;
+    --word-color-02: #ffffff;
+    --word-color-03: #000000;
+    --shadow: #000000;
+    --shadow-02: 0 0.7rem 1rem hsl(0, 0%, 4%);
+
+    --bg-texture-02: radial-gradient(
+        ellipse farthest-corner at center,
+        #1B1B1B 60%,
+        #242424 90%
+      );
+
+    --border-texture-02: 2px solid var(--main-color-06);
+
+    --water-mark-color: rgb(109, 109, 109);
+
+    --svg-color: rgb(212, 212, 212);
+    --svg-color-02: black;
+    
+    --link-hover-color: #17bbfc;
+    --pulse-effect-color: #18beff;
+    --gradient-01: linear-gradient(145deg, #ffffff, #e9e9e9, #ffffff, #e9e9e9, #ffffff, #e9e9e9);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[site-theme="light"] {
+    --main-color: #f5f5f5;
+    --main-color-02: #ffffff;
+    --main-color-03: #000000;
+    --main-color-04: #303030;
+    --main-color-05: #e7e7e7;
+    --main-color-06: #d4d4d4;
+
+    --main-color-07: #f1f1f1;
+
+    --word-color: #353535;
+    --word-color-02: #000000;
+    --word-color-03: #ffffff;
+    --svg-color: black;
+    --svg-color-02: black;
+    
+    --shadow: #757575;
+    --shadow-02: 0 0.8rem 1rem hsl(0, 0%, 85%);
+
+    --bg-texture-02: radial-gradient(
+        ellipse farthest-corner at center,
+        #f8f8f8 60%,
+        #ffffff 90%
+      );
+
+    --water-mark-color: rgb(177, 177, 177);
+
+    --link-hover-color: #17bbfc;
+    --pulse-effect-color: #18beff;
+    --gradient-01: linear-gradient(145deg, #000000, #1B1B1B, #000000, #1B1B1B, #000000, #1B1B1B);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: Twk;
+     src: url(../public/font/Twk/Twk/TWKLausanne-150.otf);
+    font-weight: 150;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: Twk;
+     src: url(../public/font/Twk/Twk/TWKLausanne-250.otf);
+    font-weight: 250;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Coresans;
+     src: url(../public/font/Core-Sans-M-SC-55-Medium/Core-Sans-M-SC-55-Medium.ttf);
+}
+
+@font-face {
+    font-family: Twk;
+     src: url(../public/font/Twk/Twk/TWKLausanne-500.otf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Twk;
+     src: url(../public/font/Twk/Twk/TWKLausanne-350.otf);
+    font-weight: 350;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Twk;
+     src: url(../public/font/Twk/Twk/TWKLausanne-300.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Bourgeois;
+     src: url(../public/font/Bourgeois/Bourgeois-Bold.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* ---------- font settings start -------------- */
+
+h1 {
+    /* font-family: Coresans; */
+    font-family: Twk;
+    color: var(--link-hover-color);
+    font-size: 6rem;
+    line-height: 6.5rem;
+    font-weight: 350;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    font-family:  Bourgeois, Twk, Helvetica, sans-serif, Arial;
+    color: var(--word-color-02);
+}
+
+h3 {
+    font-size: 3.4rem;
+    line-height: 4.2rem;
+    font-family: Twk, Helvetica, sans-serif, Arial;
+    font-weight: 450;
+    color: var(--word-color-02);
+}
+
+h4 {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    font-family: Twk, Helvetica, sans-serif, Arial;
+    font-weight: 500;
+}
+
+h5 {
+    color: var(--word-color-02);
+    font-family: Bourgeois, Twk, Helvetica, sans-serif, Arial;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+
+h6 {
+    color: var(--word-color);
+    font-family: Twk, Helvetica, sans-serif, Arial;
+    font-weight: 500;
+    line-height: 2.7rem;
+    font-size: 2.1rem;
+}
+
+p {
+    font-family: Twk, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 250;
+    letter-spacing: -2%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span {
+    font-size: 1em;
+    color: var(--word-color-02);
+}
+
+svg {
+  color: var(--svg-color);
+}
+
+svg.footer-github-icon {
+  color: var(--svg-color-02);
+}
+
+/* ---------- font settings ends -------------- */
+
+/* ----- General button style - start ----- */
+
+.buttons-container {
+    position: relative;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+}
+
+.buttons-container a .btn-01 {
+    padding: 1.2rem 2rem;
+    background-image: var(--gradient-01);
+    background-size: 300%;
+    border-radius: 3rem;
+    animation: gradient-animation-01 4s ease-in-out infinite;
+    -webkit-animation: gradient-animation-01 8s ease-in-out infinite;
+    box-shadow: 0 0 0.5rem var(--link-hover-color);
+    color: var(--word-color-03);
+    transition: .15s;
+}
+
+.buttons-container a .btn-01:hover {
+    background-position: left;
+    -webkit-animation: none;
+    animation: none;
+    box-shadow: 0 0 1rem var(--link-hover-color);
+    color: var(--link-hover-color);
+}
+
+.buttons-container a .btn-02 {
+    position: relative;
+    padding: 1rem 1.8rem;
+    background-size: 300%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    box-shadow: 0 0 0.5rem var(--link-hover-color);
+    animation: gradient-animation-01 4s ease-in-out infinite;
+    -webkit-animation: gradient-animation-01 8s ease-in-out infinite;
+    border: 2px solid var(--main-color-03);
+    color: var(--word-color-02);
+    transition: .15s;
+}
+
+.buttons-container a .btn-02:hover {
+    background-position: left;
+    -webkit-animation: none;
+    animation: none;
+    box-shadow: 0 0 1rem var(--link-hover-color);
+    color: var(--link-hover-color);
+}
+
+.buttons-container .social-media {
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+    margin-left: 2rem;
+}
+
+.buttons-container .social-media .icon {
+    position: absolute;
+    top: calc(6rem - 2rem);
+    left: 0;
+    height: 4rem;
+    width: 4rem;
+    background-color: white;
+    border-radius: 50%;
+    animation: gradient-animation-01 4s ease-in-out infinite;
+    -webkit-animation: gradient-animation-01 8s ease-in-out infinite;
+    box-shadow:
+    0.2rem 0.2rem 1rem #177afc,  
+    -0.2rem -0.2rem 1rem #3d32c2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+}
+
+.social-media .social-media-handles {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.social-media .social-media-handles a .sm {
+    position: absolute;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.3rem 0 0 0.3rem;
+    box-shadow:
+    0.2rem 0.2rem 1rem #177afc,  
+    -0.2rem -0.2rem 1rem #3d32c2ff;
+    transition: 0.25s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media .social-media-handles a:nth-child(1) .sm {
+    top: calc(6rem - 2rem);
+    left: 0rem;
+}
+
+.social-media .social-media-handles a:nth-child(2) .sm {
+    top: calc(6rem - 2rem);
+    left: 0;
+}
+
+.social-media .social-media-handles a:nth-child(3) .sm {
+    top: calc(6rem - 2rem);
+    left: 0;
+}
+
+/* ---- hover effect ---- */
+
+.buttons-container .social-media:hover .social-media-handles a:nth-child(1) .sm {
+    top: 0;
+    left: 5.5rem;
+}
+
+.buttons-container .social-media:hover .social-media-handles a:nth-child(2) .sm {
+    top: calc(6rem - 2rem);
+    left: 8rem;
+}
+
+.buttons-container .social-media:hover .social-media-handles a:nth-child(3) .sm {
+    top: 8rem;
+    left: 5.5rem;
+}
+
+.buttons-container .social-media .icon img {
+    z-index: 7;
+}
+
+@-webkit-keyframes gradient-animation-01 {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes gradient-animation-01 {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+/* ----- General button style - end ----- */
