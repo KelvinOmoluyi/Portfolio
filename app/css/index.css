@@ -63,7 +63,7 @@ nav .logo {
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> light mode toggle <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-.mode {
+/* .mode {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -105,14 +105,12 @@ label::after {
 
 /* #darkmode-toggle:checked + label {
     background-color: var(--background-color);
-} */
+}
 
 #darkmode-toggle:checked + label::after {
     left: 6rem;
     transform: translateX(-100%);
 }
-
-/* bubble effect */
 
 label:active:after {
     width: 2.5rem;
@@ -142,16 +140,15 @@ label #moon {
     border: 1px solid var(--main-color-04);
 }
 
-/* Smooth transitions */
 #sun, #moon {
     transition: all 0.3s ease;
 }
 
-/* Force toggle to match theme */
-body.light-theme #darkmode-toggle + label::after {
+
+html[data-theme="light"] #darkmode-toggle + label::after {
   left: 6rem;
   transform: translateX(-100%);
-}
+} */
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> end of code block <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -311,12 +308,12 @@ main::after {
 }
 
 /* Dark theme styles */
-.dark-theme main::after {
+html[data-theme="dark"] main::after {
     background-image: url(../../public/img/grid-background-black.png);
 }
 
 /* Dark theme styles */
-.light-theme main::after {
+html[data-theme="light"] main::after {
     background-image: url(../../public/img/grid-background-white.png);
 }
 

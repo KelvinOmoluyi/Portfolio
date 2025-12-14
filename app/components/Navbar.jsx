@@ -1,16 +1,11 @@
 "use client";
 
-import { useContext } from "react";
-import ThemeContext from "../context/ThemeContext";
+import { useThemeStore } from "@/stores/ThemeStore";
+import { Label } from "../../components/ui/label"
+import { Switch } from "../../components/ui/switch"
 
 const Navbar = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
+  const { theme, toggleTheme } = useThemeStore();
 
   return (
     <header>
@@ -27,12 +22,12 @@ const Navbar = () => {
                 rel="noopener noreferrer"
               >
                 {/* Github Icon */}
-                <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
                 fill="currentColor" stroke="currentColor">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> 
                     <title>github [#142]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" 
-                    strokeWidth="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" 
+                    strokeWidth="1" fill="none" fillRule="evenodd"> <g id="Dribbble-Light-Preview" 
                     transform="translate(-140.000000, -7559.000000)" fill="currentColor"> <g id="icons" 
                     transform="translate(56.000000, 160.000000)"> 
                     <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,
@@ -52,26 +47,16 @@ const Navbar = () => {
           </div>
 
           <div className="mode">
-            <input
-              type="checkbox"
-              id="darkmode-toggle"
+            <div className="flex items-center space-x-2">
+              <Switch 
+              id="theme-toggle"
               checked={theme === "light"}
-              onChange={toggleTheme}
-            />
-            <label htmlFor="darkmode-toggle">
-              {/* Sun Icon (Light mode) */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-sun-icon lucide-sun" id="sun">
-                <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/>
-                <path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/>
-                <path d="m19.07 4.93-1.41 1.41"/>
-            </svg>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-moon-icon lucide-moon" id="moon">
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-            </svg>
-            </label>
+              onCheckedChange={toggleTheme}
+              className="h-10 w-20 data-[state=checked]:bg-gray-400 data-[state=unchecked]:bg-gray-900"
+                thumbClassName="size-9 bg-white"
+              />
+              <Label htmlFor="theme-toggle"></Label>
+            </div>
           </div>
         </nav>
       </div>

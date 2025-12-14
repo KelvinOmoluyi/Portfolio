@@ -15,7 +15,7 @@ const IndexPage = () => {
 
     return (
         <div>
-            {/* <Navbar /> */}
+            <Navbar />
             <SideNavbar />
             <Home />
             <Projects />
