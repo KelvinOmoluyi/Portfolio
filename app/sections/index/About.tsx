@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const About = () => {
     return (
         <section className="about wrapper" id="about">
@@ -42,12 +44,12 @@ const About = () => {
                             </div>
 
                             <div className="buttons-container">
-                                <a href="#contact">
+                                <Link href="#contact">
                                     <div className="btn-01">
-                                        <p>Let's talk</p>
+                                        <p>Let&apos;s talk</p>
                                     </div>
-                                </a>
-                                <a href="file/KelvinOmoluyi.pdf" target="_blank">
+                                </Link>
+                                <a href="/file/KelvinOmoluyi.pdf" target="_blank">
                                     <div className="btn-02">
                                         <p>My resume</p>
                                     </div>

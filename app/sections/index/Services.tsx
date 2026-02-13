@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
+
 const Services = () => {
     return (
-                <section className="services wrapper" id="services">
+        <section className="services wrapper" id="services">
             <div className="services-contents">
                 <div className="services-contents-heading">
                     <h2>My Services</h2>
@@ -17,7 +19,7 @@ const Services = () => {
                             <div className="services-description">
                                 <div className="services-desc-heading">
                                     <div className="icon">
-                                        <img width="34" height="34" src="https://img.icons8.com/ios-filled/100/17bbfc/laptop-coding.png" alt="laptop-coding"/>
+                                        <Image width={34} height={34} src="https://img.icons8.com/ios-filled/100/17bbfc/laptop-coding.png" alt="laptop-coding"/>
                                     </div>
                                     <div className="heading">
                                         <h5>Web Development</h5>
@@ -37,7 +39,7 @@ const Services = () => {
                             <div className="services-description">
                                 <div className="services-desc-heading">
                                     <div className="icon">
-                                        <img width="34" height="34" src="https://img.icons8.com/material-outlined/96/17bbfc/web.png" alt="web"/>
+                                        <Image width={34} height={34} src="https://img.icons8.com/material-outlined/96/17bbfc/web.png" alt="web"/>
                                     </div>
                                     <div className="heading">
                                         <h5>Frontend Development</h5>
@@ -57,7 +59,7 @@ const Services = () => {
                             <div className="services-description">
                                 <div className="services-desc-heading">
                                     <div className="icon">
-                                        <img width="34" height="34" src="https://img.icons8.com/pulsar-line/96/17bbfc/search-bar.png" alt="search-bar"/>
+                                        <Image width={34} height={34} src="https://img.icons8.com/pulsar-line/96/17bbfc/search-bar.png" alt="search-bar"/>
                                     </div>
                                     <div className="heading">
                                         <h5>SEO - optimization</h5>
@@ -75,5 +77,5 @@ const Services = () => {
         </section>
     );
 }
- 
+
 export default Services;

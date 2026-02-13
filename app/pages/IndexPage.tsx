@@ -1,14 +1,14 @@
 import "../css/index.css"
 
 // import { useContext } from "react";
-import Home from "../components/Home";
-import Navbar from "../components/Navbar";
-import SideNavbar from "../components/SideNavbar";
+import Home from "../sections/index/Home";
+import Navbar from "../sections/index/Navbar";
+import SideNavbar from "../sections/index/SideNavbar";
 // import ThemeContext from "../context/ThemeContext";
-import Projects from "../components/Projects";
-import About from "../components/About";
-import Services from "../components/Services";
-import Footer from "../components/Footer";
+import Projects from "../sections/index/Projects";
+import About from "../sections/index/About";
+import Services from "../sections/index/Services";
+import Footer from "../sections/index/Footer";
 
 const IndexPage = () => {
     // const {theme} = useContext(ThemeContext)
@@ -21,7 +21,7 @@ const IndexPage = () => {
             <Projects />
             <About />
             <Services />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

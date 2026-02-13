@@ -1,22 +1,34 @@
 "use client";
 
-import { useThemeStore } from "@/stores/ThemeStore";
-import { Label } from "../../components/ui/label"
-import { Switch } from "../../components/ui/switch"
+import { useTheme } from "next-themes";
+import { Label } from "../../../components/ui/label"
+import { Switch } from "../../../components/ui/switch"
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useThemeStore();
+  const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setMounted(true);
+  }, []);
+
+  const toggleTheme = (checked: boolean) => {
+    setTheme(checked ? "light" : "dark");
+  };
 
   return (
     <header>
       <div className="wrapper-container wrapper">
         <nav>
           <div className="logo">
-            <a href="#">
+            <Link href="#">
               <h5>Kelvin</h5>
-            </a>
+            </Link>
             <div className="github-profile">
-              <a
+              <Link
                 href="https://github.com/KelvinOmoluyi"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -42,19 +54,21 @@ const Navbar = () => {
                     7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,
                     7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"> </path> </g> </g> </g> </g>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="mode">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 border border-gray-500 rounded-full">
+            {mounted && (
               <Switch 
-              id="theme-toggle"
-              checked={theme === "light"}
-              onCheckedChange={toggleTheme}
-              className="h-10 w-20 data-[state=checked]:bg-gray-400 data-[state=unchecked]:bg-gray-900"
+                id="theme-toggle"
+                checked={resolvedTheme === "light"}
+                onCheckedChange={toggleTheme}
+                className="h-10 w-20 data-[state=checked]:bg-gray-400/10 data-[state=unchecked]:bg-gray-900/10"
                 thumbClassName="size-9 bg-white"
               />
+            )}
               <Label htmlFor="theme-toggle"></Label>
             </div>
           </div>
