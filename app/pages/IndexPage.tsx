@@ -1,4 +1,5 @@
 import "../css/index.css"
+import "../css/responsive.css"
 
 // import { useContext } from "react";
 import Home from "../sections/index/Home";

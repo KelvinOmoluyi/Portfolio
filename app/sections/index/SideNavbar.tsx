@@ -77,14 +77,23 @@ const SideNavbar = () => {
                   
                 <button 
                 onClick={toggleBurgerMenu} 
-                className={isBurgerMenuOpen ? 'bx bx-x' : 'bx bx-menu'} id="menu-icon" />
+                id="menu-icon"
+                className="flex items-center justify-center bg-transparent border-none cursor-pointer w-full h-full"
+                >
+                    <div className="flex items-center justify-center w-full h-full">
+                        {isBurgerMenuOpen ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+                        )}
+                    </div>
+                </button>
             </nav>
 
-             {/* The responsive burger menu  */}
-        
+            {/* The responsive burger menu  */}
             <motion.div 
             className="burger-menu"
-            initial={{ display: 'block'}}
+            initial={{ display: 'none'}}
             animate={isBurgerMenuOpen ? {display: 'block'} : { display: 'none'}}
             transition={{ duration: 0, delay: 0 }}
             >
