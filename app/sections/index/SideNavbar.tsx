@@ -90,7 +90,7 @@ const SideNavbar = () => {
             >
                 <ul>
                     <li>
-                        <Link href="#overview">
+                        <Link href="#overview" onClick={toggleBurgerMenu}>
                             <div className="burger-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
                                     fill="none" stroke="currentColor" 
@@ -106,7 +106,7 @@ const SideNavbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#projects">
+                        <Link href="#projects" onClick={toggleBurgerMenu}>
                             <div className="burger-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
                                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cpu-icon lucide-cpu">
@@ -120,7 +120,7 @@ const SideNavbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#about">
+                        <Link href="#about" onClick={toggleBurgerMenu}>
                             <div className="burger-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
                                     strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user-icon lucide-user">
@@ -133,7 +133,7 @@ const SideNavbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#services">
+                        <Link href="#services" onClick={toggleBurgerMenu}>
                             <div className="burger-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
                                     strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-hand-helping-icon lucide-hand-helping">
@@ -147,7 +147,7 @@ const SideNavbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#reviews">
+                        <Link href="#reviews" onClick={toggleBurgerMenu}>
                             <div className="burger-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" 
                                     strokeLinejoin="round" className="lucide lucide-message-square-diff-icon lucide-message-square-diff">
