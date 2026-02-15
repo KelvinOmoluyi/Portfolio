@@ -76,7 +76,7 @@ const projects = [
     image: {
       path: "/img/summer-castle-logo.png",
       alt: "Summer Castle logo",
-      thumbNail: "/img/summercastle-thumbnail.png",
+      thumbNail: "/img/summer-castle-thumbnail.png",
     },
     ongoing: false,
     previewLink: "https://summercastle.ct.ws/",

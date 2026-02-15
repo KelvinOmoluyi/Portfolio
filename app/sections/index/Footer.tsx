@@ -1,5 +1,6 @@
 "use client";
 
+import { getYear } from "@/lib/utils";
 import Image from "next/image";
 
 const Footer = () => {
@@ -43,7 +44,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="footer-copyright">
-                    <p>Copyright &copy; 2025 . All Rights Reserved</p>
+                    <p>Copyright &copy; {getYear()} . All Rights Reserved</p>
                 </div>
             </div>
         </footer>
