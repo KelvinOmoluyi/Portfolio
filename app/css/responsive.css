@@ -47,9 +47,10 @@
     }
     
     /* ----------------- project pic or vid --------------- */
-    
+
     .project-box .media {
         width: 100%;
+        aspect-ratio: 2/1
     }
 
     .media a img {
@@ -74,7 +75,11 @@
 
 
 @media only screen and (max-width: 1121px) {
+    .about-section-contents .personal-info-container {
+        align-items: stretch;
+    }
     .about-section-contents .right-contents {
+        height: fit-content;
         height: -webkit-fit-content;
         height: -moz-fit-content;
     }
@@ -106,11 +111,14 @@
     }
 
     .about-section-contents .right-contents {
-        width: calc(100% - 30rem);
-        padding-left: 5rem;
+        width: calc(100% - 32rem);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .right-contents .personal-info {
+        width: 100%;
     }
 }
 
@@ -141,7 +149,6 @@
 
     .about-section-contents .right-contents {
         width: 100%;
-        padding-left: 0rem;
         row-gap: 2rem;
         margin-top: 3rem;
     }
