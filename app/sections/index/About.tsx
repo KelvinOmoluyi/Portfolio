@@ -11,9 +11,11 @@ const About = () => {
                 </div>
 
                 <div className="personal-info-container">
-                    <div className="left-picture">
-                        <div className="spin"></div>
-                        <div className="img"></div>
+                    <div>
+                        <div className="left-picture">
+                            <div className="spin"></div>
+                            <div className="img"></div>
+                        </div>
                     </div>
         
                     <div className="right-contents">

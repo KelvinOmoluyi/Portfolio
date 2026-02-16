@@ -475,13 +475,14 @@ section.projects {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 1rem;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
 }
 
 .project-title .project-logo {
-    height: 4.8rem;
-    width: 4.8rem;
+    height: 4.5rem;
+    width: 4.5rem;
 }
 
 .top-description-contents .description-of-project {
@@ -656,7 +657,7 @@ section.about {
 
 .about-section-contents .right-contents {
     width: calc(100% - 39rem);
-    height: 48rem;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -777,14 +778,14 @@ section.about {
 }
 
 .stack-box .stack:nth-child(7) {
-    background-image: url(../../public/icons/mongodb-logo.png);
-    background-size: cover;
+    background-image: url(../../public/icons/react-native-logo.png);
+    background-size: 150%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .stack-box .stack:nth-child(7):hover {
-    background-size: 140%;
+    background-size: 160%;
 }
 
 .stack-box .stack:nth-child(8) {

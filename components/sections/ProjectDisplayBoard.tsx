@@ -14,7 +14,7 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                 <div className="description">
                     <div className="top-description-contents">
                         <div className="project-title">
-                            <div className="project-logo relative w-[4.8rem] h-[4.8rem]">
+                            <div className="project-logo relative">
                                 <Image 
                                   src={project.image.path} 
                                   alt={project.image.alt} 
@@ -70,7 +70,7 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                         </div>
                     </div>
                 </div>
-                <div className="media relative min-h-full">
+                <div className="media relative">
                     <a href={project.previewLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
                       <Image 
                         src={project.image.thumbNail} 
