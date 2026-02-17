@@ -76,7 +76,7 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                         src={project.image.thumbNail} 
                         alt={project.company} 
                         fill
-                        className="object-cover rounded-3xl"
+                        className='object-cover h-auto'
                       />
                     </a>
                 </div>

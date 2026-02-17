@@ -42,7 +42,7 @@ const Home = () => {
                         <h1>Let&apos;s Work Together To Create And Innovate</h1>
                     </div>
                     <div className="small-words">
-                        <p>I am a <span>Software Engineer</span> expert at <span>Deriving solutions</span>, I brige the gap between <span>wholesome, user intuitive designs</span> and <span>functionality</span>, and I deliver with <span>precision</span>.</p>
+                        <p>I am a <span>Software Engineer</span> expert at <span>Deriving solutions</span>, I brige the gap between <span>wholesome, user intuitive designs</span> and <span>functionality</span>, and I deliver with <span>speed</span> and <span>precision</span>.</p>
                     </div>
                     <div className="buttons-container">
                         <Link href="#contact">
