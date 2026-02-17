@@ -1,8 +1,9 @@
 "use client";
 
 import ProjectDisplayBoard from '@/components/sections/ProjectDisplayBoard';
+import { useState } from 'react';
 
-const projects = [
+const webProjects = [
   {
     company: "Apexify",
     description: "I developed a <span>React-based Dashboard</span> equipped with a <span>scalable design system</span> that includes a <span>highly reusable button component</span> supporting multiple variants, sizes, and states. The dashboard also features <span>interactive data visualizations</span> built with a <span>customized charting library</span>, delivering insightful analytics with <span>responsive layouts</span> and <span>intuitive tooltips</span>.",
@@ -83,7 +84,46 @@ const projects = [
   },
 ];
 
+const mobileProjects = [
+  {
+    company: "Undisturb",
+    description: "I collaborated with ADTC to create a <span>cross-platform</span> mobile app called <span>Undisturb</span>, a <span>personalized AI wellness companion</span>, designed to help you <span>sleep better</span>, <span>manage stress</span>, and <span>build and track lifelong habits</span>, equiped with a <span>in app subscription</span> and native features",
+    keywords: ["AI", "Wellness", "Mobile application", "Behavioral science"],
+    skills: ["React Native", "Expo", "Typescript", "Nativewind", "Revenue Cat"],
+    image: {
+      path: "/img/undisturb-logo.png",
+      alt: "Undisturb logo",
+      thumbNail: "/img/undisturb-thumbnail.png",
+    },
+    ongoing: false,
+    previewLink: "https://undisturb.io/",
+  },
+  {
+    company: "Etufula",
+    description: "I developed a web application for a <span>HR</span> and <span>Recruitment</span> firm, Equiped with <span>user intuitive UI</span> and <span>strategic C-T-A messages</span>, to ease and encourage contact, It also features a <span>smart 2-step contact form</span> to <span>streamline</span> and <span>increase</span> the productivity of employees.",
+    keywords: ["HR outsourcing", "Hr solutions", "Workforce solutions"],
+    skills: ["Html", "Css", "JavaScript", "Php", "Mysql"],
+    image: {
+      path: "/img/global-hr-logo.png",
+      alt: "GHS logo",
+      thumbNail: "/img/GHS-thumbnail.png",
+    },
+    ongoing: true,
+    previewLink: "https://globalhrservices.42web.io/",
+  },
+];
+
 const Projects = () => {
+  const [planType, setPlanType] = useState("Mobile Apps");
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(e.target.checked);
+    setTimeout(() => {
+      setPlanType(e.target.checked ? "Web Apps" : "Mobile Apps")
+    }, 300)
+  }
+
   return (
     <section className="projects" id="projects">
       <div className="projects-contents wrapper">
@@ -92,10 +132,27 @@ const Projects = () => {
           <div className="small-words">
             <p>Here are some of the projects I have worked on or participated in building.</p>
           </div>
+
+          <div className="project-toggle-container">
+            <input 
+            type="checkbox"  
+            id="project-toggle"
+            onChange={handleToggle}
+            checked={isChecked}
+            />
+            <label htmlFor="project-toggle">
+                <p id="unchecked">Mobile Apps</p>
+                <p id="checked">Web Apps</p>
+            </label>
+          </div>
         </div>
 
+        
+
         <div className="projects-container">
-          {projects.map((project, index) => (
+          {planType === "Mobile Apps" ? mobileProjects.map((project, index) => (
+            <ProjectDisplayBoard key={index} project={project} />
+          )) : webProjects.map((project, index) => (
             <ProjectDisplayBoard key={index} project={project} />
           ))}
         </div>

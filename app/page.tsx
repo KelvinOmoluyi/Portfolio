@@ -1,10 +1,10 @@
 
-import IndexPage from "./pages/IndexPage";
+import Index from "./pages/home/page";
 
 export default function Home() {
   return (
     <>
-      <IndexPage />
+      <Index />
     </>
   );
 }
