@@ -98,19 +98,6 @@ const mobileProjects = [
     ongoing: false,
     previewLink: "https://undisturb.io/",
   },
-  {
-    company: "Etufula",
-    description: "I developed a web application for a <span>HR</span> and <span>Recruitment</span> firm, Equiped with <span>user intuitive UI</span> and <span>strategic C-T-A messages</span>, to ease and encourage contact, It also features a <span>smart 2-step contact form</span> to <span>streamline</span> and <span>increase</span> the productivity of employees.",
-    keywords: ["HR outsourcing", "Hr solutions", "Workforce solutions"],
-    skills: ["Html", "Css", "JavaScript", "Php", "Mysql"],
-    image: {
-      path: "/img/global-hr-logo.png",
-      alt: "GHS logo",
-      thumbNail: "/img/GHS-thumbnail.png",
-    },
-    ongoing: true,
-    previewLink: "https://globalhrservices.42web.io/",
-  },
 ];
 
 const Projects = () => {
