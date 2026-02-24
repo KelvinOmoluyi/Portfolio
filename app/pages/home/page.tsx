@@ -10,6 +10,7 @@ import Projects from "@/app/sections/index/Projects";
 import About from "@/app/sections/index/About";
 import Services from "@/app/sections/index/Services";
 import Footer from "@/app/sections/index/Footer";
+import Exploration from "@/app/sections/index/Exploration";
 
 const Index = () => {
     // const {theme} = useContext(ThemeContext)
@@ -22,6 +23,7 @@ const Index = () => {
             <Projects />
             <About />
             <Services />
+            <Exploration />
             <Footer />
         </div>
     );

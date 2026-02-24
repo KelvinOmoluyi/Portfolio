@@ -168,6 +168,31 @@
 
 
 
+/* Carousel responsive - single slide on mobile */
+@media only screen and (max-width: 820px) {
+    .carousel-track {
+        width: 32rem;
+        height: 52rem;
+    }
+
+    .carousel-item--left,
+    .carousel-item--right {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .carousel-item--center {
+        transform: translate(-50%, -50%) translateZ(0) rotateY(0deg) scale(1);
+    }
+
+    .exploration-carousel {
+        gap: 1rem;
+    }
+}
+
+
+
+
 
 @media only screen and (max-width: 721px) {
     .wrapper {
@@ -458,8 +483,6 @@
         flex-wrap: wrap;
     }
 }
-
-
 
 
 
