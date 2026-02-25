@@ -632,10 +632,23 @@ section.projects {
 .bottom-description-contents .visit-site-cta {
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
+    align-items: center;
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
     padding: 1rem 0 0;
+}
+
+.visit-site-cta h5 {
+    color: var(--main-color-04);
+}
+
+.visit-site-cta .cta-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
 }
 
 .visit-site-cta .link {
