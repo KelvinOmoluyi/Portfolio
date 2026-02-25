@@ -56,6 +56,10 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                           ))}
                         </div>
                         <div className="visit-site-cta">
+                          <div>
+                            <h5>{project.realWorldProduct ? "Real Client Project ✨" : project.productProject ? "Product Project 🚧" : "Portfolio Project"}</h5>
+                          </div>
+                          <div className="cta-container">
                             <div className="cta">
                                 <a href={project.previewLink} target="_blank" rel="noopener noreferrer"><h6><span>Visit website</span></h6></a>
                             </div>
@@ -67,6 +71,7 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                                     </svg>
                                 </a>
                             </div>
+                          </div>
                         </div>
                     </div>
                 </div>

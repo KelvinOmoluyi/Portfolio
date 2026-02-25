@@ -10,4 +10,6 @@ export interface Project {
   };
   ongoing: boolean;
   previewLink: string;
+  realWorldProduct?: boolean;
+  productProject?: boolean;
 }

@@ -5,6 +5,20 @@ import { useState } from 'react';
 
 const webProjects = [
   {
+    company: "Jemash Resorces Limited",
+    description: "I built a web application for a <span>HR</span> and <span>Outsourcing</span> company, helping them in <span>establishing their online presence</span> and <span>upskill</span> their <span>work flow</span> with CV/Resume submission system, <span>Reducing</span> the time they take to recruit by <span>40%</span>",
+    keywords: ["HR outsourcing", "Hr solutions", "Workforce solutions"],
+    skills: ["Html", "Css", "JavaScript", "Php", "Mysql"],
+    image: {
+      path: "/img/Jemash-logo.png",
+      alt: "jemash logo",
+      thumbNail: "/img/Jemash-thumbnail.PNG",
+    },
+    ongoing: false,
+    realWorldProduct: true,
+    previewLink: "https://jemashresourcesltd.com/",
+  },
+  {
     company: "Apexify",
     description: "I developed a <span>React-based Dashboard</span> equipped with a <span>scalable design system</span> that includes a <span>highly reusable button component</span> supporting multiple variants, sizes, and states. The dashboard also features <span>interactive data visualizations</span> built with a <span>customized charting library</span>, delivering insightful analytics with <span>responsive layouts</span> and <span>intuitive tooltips</span>.",
     keywords: ["B2B", "Dashboard", "Web application", "SAAS"],
@@ -40,7 +54,7 @@ const webProjects = [
       alt: "GHS logo",
       thumbNail: "/img/GHS-thumbnail.png",
     },
-    ongoing: true,
+    ongoing: false,
     previewLink: "https://globalhrservices.42web.io/",
   },
   {
@@ -56,32 +70,19 @@ const webProjects = [
     ongoing: false,
     previewLink: "https://projmg-8qg8.vercel.app/",
   },
-  {
-    company: "Jemash Resorces Limited",
-    description: "I built a web application for a <span>HR</span> and <span>Outsourcing</span> company, helping them in <span>establishing their online presence</span> and <span>upskill</span> their <span>work flow</span> with CV/Resume submission system, <span>Reducing</span> the time they take to recruit by <span>40%</span>",
-    keywords: ["HR outsourcing", "Hr solutions", "Workforce solutions"],
-    skills: ["Html", "Css", "JavaScript", "Php", "Mysql"],
-    image: {
-      path: "/img/Jemash-logo.png",
-      alt: "jemash logo",
-      thumbNail: "/img/Jemash-thumbnail.PNG",
-    },
-    ongoing: false,
-    previewLink: "https://jemashresourcesltd.com/",
-  },
-  {
-    company: "Summer Castle",
-    description: "I built a Dynamic and Inviting website for a made-up <span>Hotel resort</span> and <span>Travels</span> company called Summer Castle, Assuming a web app that <span>showcases</span> and <span>processes accomodation</span>",
-    keywords: ["luxury suites", "resort", "vacation", "travels"],
-    skills: ["Html", "Css", "JavaScript", "Php", "Mysql"],
-    image: {
-      path: "/img/summer-castle-logo.png",
-      alt: "Summer Castle logo",
-      thumbNail: "/img/summer-castle-thumbnail.png",
-    },
-    ongoing: false,
-    previewLink: "https://summercastle.ct.ws/",
-  },
+  // {
+  //   company: "Summer Castle",
+  //   description: "I built a Dynamic and Inviting website for a made-up <span>Hotel resort</span> and <span>Travels</span> company called Summer Castle, Assuming a web app that <span>showcases</span> and <span>processes accomodation</span>",
+  //   keywords: ["luxury suites", "resort", "vacation", "travels"],
+  //   skills: ["Html", "Css", "JavaScript", "Php", "Mysql"],
+  //   image: {
+  //     path: "/img/summer-castle-logo.png",
+  //     alt: "Summer Castle logo",
+  //     thumbNail: "/img/summer-castle-thumbnail.png",
+  //   },
+  //   ongoing: false,
+  //   previewLink: "https://summercastle.ct.ws/",
+  // },
 ];
 
 const mobileProjects = [
@@ -96,6 +97,21 @@ const mobileProjects = [
       thumbNail: "/img/undisturb-thumbnail.png",
     },
     ongoing: false,
+    previewLink: "https://undisturb.io/",
+    realWorldProduct: true,
+  },
+  {
+    company: "GamexPay",
+    description: "I am collaborating on GameXpay, a <span>cross-platform</span> mobile <span>fintech</span> app that enables gamers to <span>purchase in-game currency</span> using <span>standard bank transfers</span>. Designed to remove <span>payment friction</span> and simplify digital purchases, the app integrates secure wallet management, transaction tracking, and native mobile features tailored for modern gamers.",
+    keywords: ["Gaming", "Web3", "Tokens", "NFT"],
+    skills: ["React Native", "Expo", "Typescript", "Ether.js"],
+    image: {
+      path: "/img/gamexpay-logo.png",
+      alt: "GamexPay logo",
+      thumbNail: "/img/gamexpay-thumbnail.png",
+    },
+    ongoing: true,
+    productProject: true,
     previewLink: "https://undisturb.io/",
   },
 ];
