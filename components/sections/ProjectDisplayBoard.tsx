@@ -58,7 +58,7 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                         <div className="visit-site-cta">
                           <div>
                             <h5>
-                              {project.realWorldProduct ? "Real Client Project ✨" : project.productProject ? "Product Project 🚧" : "Portfolio Project"}\
+                              {project.realWorldProduct ? "Real Client Project" : project.productProject ? "Product Project" : "Portfolio Project"}
                             </h5>
                           </div>
                           <div className="cta-container">
