@@ -15,15 +15,15 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                     <div className="top-description-contents">
                         <div className="project-title">
                             <div className="project-logo relative">
-                                <Image 
-                                  src={project.image.path} 
-                                  alt={project.image.alt} 
-                                  fill
-                                  className="object-cover"
-                                />
+                              <Image 
+                                src={project.image.path} 
+                                alt={project.image.alt} 
+                                fill
+                                className="object-cover"
+                              />
                             </div>
                             <div className="project-name">
-                                <h5>{project.company}</h5>
+                              <h5>{project.company}</h5>
                             </div>
                         </div>
                         <div className="description-of-project">
@@ -57,7 +57,9 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                         </div>
                         <div className="visit-site-cta">
                           <div>
-                            <h5>{project.realWorldProduct ? "Real Client Project ✨" : project.productProject ? "Product Project 🚧" : "Portfolio Project"}</h5>
+                            <h5>
+                              {project.realWorldProduct ? "Real Client Project ✨" : project.productProject ? "Product Project 🚧" : "Portfolio Project"}\
+                            </h5>
                           </div>
                           <div className="cta-container">
                             <div className="cta">
