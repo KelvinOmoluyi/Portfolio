@@ -5,6 +5,19 @@ import { useState } from 'react';
 
 const webProjects = [
   {
+    company: "Aureter",
+    description: "I built a full-stack <span>SaaS recruitment platform</span> for HR agencies, equipped with <span>AI-powered resume screening</span> and an <span>RAG HR assistant</span>, to automate and streamline the hiring process. It features a <span>smart interview scheduling system</span> with automated candidate emails to <span>accelerate</span> and <span>centralise</span> the entire recruitment pipeline.",
+    keywords: ["AI Recruitment", "HR SaaS", "Interview Automation"],
+    skills: ["React", "TypeScript", "Supabase", "PostgreSQL", "Groq AI", "TanStack Query", "Vite"],
+    image: {
+      path: "/img/aureter-logo.png",
+      alt: "Aureter logo",
+      thumbNail: "/img/Aureter-thumbnail.png",
+    },
+    ongoing: false,
+    previewLink: "https://aureter.vercel.app/",
+  },
+  {
     company: "Jemash Resorces Limited",
     description: "I built a web application for a <span>HR</span> and <span>Outsourcing</span> company, helping them in <span>establishing their online presence</span> and <span>upskill</span> their <span>work flow</span> with CV/Resume submission system, <span>Reducing</span> the time they take to recruit by <span>40%</span>",
     keywords: ["HR outsourcing", "Hr solutions", "Workforce solutions"],
@@ -30,19 +43,6 @@ const webProjects = [
     },
     ongoing: false,
     previewLink: "https://dashboard-sigma-taupe-48.vercel.app/",
-  },
-  {
-    company: "YC Directory",
-    description: "I built <span>YC Directory</span>, a <span>dynamic web application</span>. It features a <span>responsive search system</span> synced with the <span>browser URL</span> for smooth navigation, a <span>reusable card component</span> for startup showcases, and a <span>scalable UI</span> powered by <span>Next.js</span> and <span>Tailwind CSS</span>. The project also integrates Sentry, ensuring both <span>speed</span> and <span>reliability</span>.",
-    keywords: ["startup", "Nextjs", "Web application", "Rendering Pattern"],
-    skills: ["Nextjs", "Typescript", "TailwindCss", "Sanity", "OAuth"],
-    image: {
-      path: "/img/YC-logo.png",
-      alt: "YC Directory logo",
-      thumbNail: "/img/YCDirectory-img.PNG",
-    },
-    ongoing: false,
-    previewLink: "https://yc-directory-three-eta.vercel.app/",
   },
   {
     company: "Global HR Services",
@@ -137,26 +137,26 @@ const Projects = () => {
           </div>
 
           <div className="project-toggle-container">
-            <input 
-            type="checkbox"  
-            id="project-toggle"
-            onChange={handleToggle}
-            checked={isChecked}
+            <input
+              type="checkbox"
+              id="project-toggle"
+              onChange={handleToggle}
+              checked={isChecked}
             />
             <label htmlFor="project-toggle">
-                <p id="unchecked">Mobile Apps</p>
-                <p id="checked">Web Apps</p>
+              <p id="unchecked">Mobile Apps</p>
+              <p id="checked">Web Apps</p>
             </label>
           </div>
         </div>
 
-        
+
 
         <div className="projects-container">
           {planType === "Mobile Apps" ? mobileProjects.map((project, index) => (
-            <ProjectDisplayBoard key={index} project={project} />
+            <ProjectDisplayBoard key={project.company} project={project} />
           )) : webProjects.map((project, index) => (
-            <ProjectDisplayBoard key={index} project={project} />
+            <ProjectDisplayBoard key={project.company} project={project} />
           ))}
         </div>
       </div>
