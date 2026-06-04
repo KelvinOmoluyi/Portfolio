@@ -5,6 +5,20 @@ import { useState } from 'react';
 
 const webProjects = [
   {
+    company: "BDKG Media",
+    description: "I built a highly-immersive, <span>high-performance agency platform</span> that scales to handle heavy video assets. The site features <span>custom-engineered video carousels</span> with auto-play center detection, <span>Cloudinary optimization pipelines</span> for instant media delivery across iOS and Desktop, and dynamic creator statistics powered by a <span>Supabase backend</span>. The result is a premium, <span>lag-free user experience</span> with complex <span>Framer Motion animations</span>.",
+    keywords: ["Creative Agency", "Video Streaming", "Performance Optimization"],
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase", "Cloudinary"],
+    image: {
+      path: "/img/bdkg-logo.jpg",
+      alt: "bdkg logo",
+      thumbNail: "/img/bdkg-thumbnail.png",
+    },
+    ongoing: false,
+    realWorldProduct: true,
+    previewLink: "https://www.bdkg.media",
+  },
+  {
     company: "Aureter",
     description: "I built a full-stack <span>SaaS recruitment platform</span> for HR agencies, equipped with <span>AI-powered resume screening</span> and an <span>RAG HR assistant</span>, to automate and streamline the hiring process. It features a <span>smart interview scheduling system</span> with automated candidate emails to <span>accelerate</span> and <span>centralise</span> the entire recruitment pipeline.",
     keywords: ["AI Recruitment", "HR SaaS", "Interview Automation"],
