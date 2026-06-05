@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     siteName: "Kelvin Omoluyi - Mobile & Web Developer",
     images: [
       {
-        url: "https://kelvinomoluyi.vercel.app/favicon_io/android-chrome-192x192.png",
-        width: 192,
-        height: 192,
+        url: "/img/cta_image.webp",
+        width: 1200,
+        height: 630,
         alt: "Kelvin Omoluyi - Mobile & Web Developer",
       },
     ],
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kelvin Omoluyi - Mobile & Web Developer",
     description: "Deriving solutions, Bridging the gap between design and functionality, delivered with precision.",
-    images: ["https://jemashresources.com/uploads/jemash-banner.png"], 
+    images: ["/img/cta_image.webp"], 
     creator: "@KelvinOmoluyi", 
   },
 };
