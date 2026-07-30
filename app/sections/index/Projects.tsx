@@ -5,32 +5,54 @@ import { useState } from 'react';
 
 const webProjects = [
   {
-    company: "BDKG Media",
-    description: "I built a highly-immersive, <span>high-performance agency platform</span> that scales to handle heavy video assets. The site features <span>custom-engineered video carousels</span> with auto-play center detection, <span>Cloudinary optimization pipelines</span> for instant media delivery across iOS and Desktop, and dynamic creator statistics powered by a <span>Supabase backend</span>. The result is a premium, <span>lag-free user experience</span> with complex <span>Framer Motion animations</span>.",
-    keywords: ["Creative Agency", "Video Streaming", "Performance Optimization"],
-    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase", "Cloudinary"],
-    image: {
-      path: "/img/bdkg-logo.jpg",
-      alt: "bdkg logo",
-      thumbNail: "/img/bdkg-thumbnail.png",
-    },
-    ongoing: false,
-    realWorldProduct: true,
-    previewLink: "https://www.bdkg.media",
+  company: "BDKG Media",
+  description: "I built a <span>full-stack media platform</span> for a creative agency, designing a <span>Supabase-powered backend</span> to manage creator content, statistics, and media assets. I implemented <span>Cloudinary optimization pipelines</span> for efficient video delivery and engineered a scalable architecture capable of serving <span>high-volume media content</span> with minimal latency across web and mobile devices.",
+  keywords: ["Creative Agency", "Media Platform", "Performance Optimization"],
+  skills: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Supabase",
+    "PostgreSQL",
+    "Cloudinary",
+    "Tailwind CSS",
+    "Framer Motion"
+  ],
+  image: {
+    path: "/img/bdkg-logo.jpg",
+    alt: "bdkg logo",
+    thumbNail: "/img/bdkg-thumbnail.png",
   },
+  ongoing: false,
+  realWorldProduct: true,
+  previewLink: "https://www.bdkg.media",
+},
   {
-    company: "Aureter",
-    description: "I built a full-stack <span>SaaS recruitment platform</span> for HR agencies, equipped with <span>AI-powered resume screening</span> and an <span>RAG HR assistant</span>, to automate and streamline the hiring process. It features a <span>smart interview scheduling system</span> with automated candidate emails to <span>accelerate</span> and <span>centralise</span> the entire recruitment pipeline.",
-    keywords: ["AI Recruitment", "HR SaaS", "Interview Automation"],
-    skills: ["React", "TypeScript", "Supabase", "PostgreSQL", "Groq AI", "TanStack Query", "Vite"],
-    image: {
-      path: "/img/aureter-logo.png",
-      alt: "Aureter logo",
-      thumbNail: "/img/Aureter-thumbnail.png",
-    },
-    ongoing: false,
-    previewLink: "https://aureter.vercel.app/",
+  company: "Aureter",
+  description: "I architected a <span>multi-tenant recruitment SaaS</span> for HR agencies, backed by <span>PostgreSQL and Supabase</span>. The platform features an <span>AI-powered resume screening pipeline</span>, an <span>RAG recruitment assistant</span>, automated interview scheduling, candidate lifecycle management, and <span>role-based workspaces</span> designed to centralize recruitment operations. I also built an <span>intent-aware retrieval system</span> and <span>context caching layer</span> that significantly reduced database queries while improving AI response performance.",
+  keywords: [
+    "AI Recruitment",
+    "Multi-tenant SaaS",
+    "Decision Intelligence"
+  ],
+  skills: [
+    "React",
+    "TypeScript",
+    "Supabase",
+    "PostgreSQL",
+    "Groq AI",
+    "RAG",
+    "TanStack Query",
+    "Vite"
+  ],
+  image: {
+    path: "/img/aureter-logo.png",
+    alt: "Aureter logo",
+    thumbNail: "/img/Aureter-thumbnail.png",
   },
+  ongoing: false,
+  previewLink: "https://aureter.vercel.app/",
+},
   {
     company: "Jemash Resorces Limited",
     description: "I built a web application for a <span>HR</span> and <span>Outsourcing</span> company, helping them in <span>establishing their online presence</span> and <span>upskill</span> their <span>work flow</span> with CV/Resume submission system, <span>Reducing</span> the time they take to recruit by <span>40%</span>",
@@ -58,32 +80,6 @@ const webProjects = [
     ongoing: false,
     previewLink: "https://dashboard-sigma-taupe-48.vercel.app/",
   },
-  {
-    company: "Global HR Services",
-    description: "I developed a web application for a <span>HR</span> and <span>Recruitment</span> firm, Equiped with <span>user intuitive UI</span> and <span>strategic C-T-A messages</span>, to ease and encourage contact, It also features a <span>smart 2-step contact form</span> to <span>streamline</span> and <span>increase</span> the productivity of employees.",
-    keywords: ["HR outsourcing", "Hr solutions", "Workforce solutions"],
-    skills: ["Html", "Css", "JavaScript", "Php", "Mysql"],
-    image: {
-      path: "/img/global-hr-logo.png",
-      alt: "GHS logo",
-      thumbNail: "/img/GHS-thumbnail.png",
-    },
-    ongoing: false,
-    previewLink: "https://globalhrservices.42web.io/",
-  },
-  {
-    company: "Proj.MG",
-    description: "A Landing page for a project managing company, it's built with a <span>captivating UI</span>, <span>detailed images</span> and <span>strong C-T-A</span> links to boost <span>covertion</span>",
-    keywords: ["Project Management", "Work flow", "Saas", "Landing page"],
-    skills: ["React", "Vanilla Css", "Framer Motion", "Php", "Mysql"],
-    image: {
-      path: "/img/global-hr-logo.png",
-      alt: "GHS logo",
-      thumbNail: "/img/proj.mg.png",
-    },
-    ongoing: false,
-    previewLink: "https://projmg-8qg8.vercel.app/",
-  },
   // {
   //   company: "Summer Castle",
   //   description: "I built a Dynamic and Inviting website for a made-up <span>Hotel resort</span> and <span>Travels</span> company called Summer Castle, Assuming a web app that <span>showcases</span> and <span>processes accomodation</span>",
@@ -101,33 +97,54 @@ const webProjects = [
 
 const mobileProjects = [
   {
-    company: "Undisturb",
-    description: "I collaborated with ADTC to create a <span>cross-platform</span> mobile app called <span>Undisturb</span>, a <span>personalized AI wellness companion</span>, designed to help you <span>sleep better</span>, <span>manage stress</span>, and <span>build and track lifelong habits</span>, equiped with a <span>in app subscription</span> and native features",
-    keywords: ["AI", "Wellness", "Mobile application", "Behavioral science"],
-    skills: ["React Native", "Expo", "Typescript", "Nativewind", "Revenue Cat"],
-    image: {
-      path: "/img/undisturb-logo.png",
-      alt: "Undisturb logo",
-      thumbNail: "/img/undisturb-thumbnail.png",
-    },
-    ongoing: false,
-    previewLink: "https://undisturb.io/",
-    realWorldProduct: true,
+  company: "Undisturb",
+  description: "I collaborated with ADTC to build <span>Undisturb</span>, a <span>cross-platform AI wellness platform</span> that delivers personalized sleep, stress management, and habit-building experiences. I implemented <span>secure cloud-backed user workflows</span>, <span>in-app subscription management</span>, and native mobile integrations to provide a scalable, production-ready wellness experience across iOS and Android.",
+  keywords: [
+    "AI",
+    "Wellness",
+    "Cross-platform",
+    "Subscription Platform"
+  ],
+  skills: [
+    "React Native",
+    "Expo",
+    "TypeScript",
+    "NativeWind",
+    "RevenueCat"
+  ],
+  image: {
+    path: "/img/undisturb-logo.png",
+    alt: "Undisturb logo",
+    thumbNail: "/img/undisturb-thumbnail.png",
   },
+  ongoing: false,
+  previewLink: "https://undisturb.io/",
+  realWorldProduct: true,
+},
   {
-    company: "GamexPay",
-    description: "I am collaborating on GameXpay, a <span>cross-platform</span> mobile <span>fintech</span> app that enables gamers to <span>purchase in-game currency</span> using <span>standard bank transfers</span>. Designed to remove <span>payment friction</span> and simplify digital purchases, the app integrates secure wallet management, transaction tracking, and native mobile features tailored for modern gamers.",
-    keywords: ["Gaming", "Web3", "Tokens", "NFT"],
-    skills: ["React Native", "Expo", "Typescript", "Ether.js"],
-    image: {
-      path: "/img/gamexpay-logo.png",
-      alt: "GamexPay logo",
-      thumbNail: "/img/gamexpay-thumbnail.png",
-    },
-    ongoing: true,
-    productProject: true,
-    previewLink: "https://undisturb.io/",
+  company: "GamexPay",
+  description: "I am collaborating on <span>GameXPay</span>, a <span>cross-platform fintech platform</span> that enables gamers to purchase digital assets using <span>local bank transfers</span>. I contributed to secure payment workflows, wallet management, transaction tracking, and blockchain integrations, building a reliable financial experience that reduces payment friction for digital purchases.",
+  keywords: [
+    "Fintech",
+    "Gaming",
+    "Payments",
+    "Blockchain"
+  ],
+  skills: [
+    "React Native",
+    "Expo",
+    "TypeScript",
+    "Ether.js"
+  ],
+  image: {
+    path: "/img/gamexpay-logo.png",
+    alt: "GamexPay logo",
+    thumbNail: "/img/gamexpay-thumbnail.png",
   },
+  ongoing: true,
+  productProject: true,
+  previewLink: "https://undisturb.io/",
+},
 ];
 
 const Projects = () => {

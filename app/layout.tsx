@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kelvin Omoluyi - Mobile & Web Developer",
     description: "Deriving solutions, Bridging the gap between design and functionality, delivered with precision.",
-    images: ["/img/cta_image.webp"], 
-    creator: "@KelvinOmoluyi", 
+    images: ["/img/cta_image.webp"],
+    creator: "@KelvinOmoluyi",
   },
 };
 
@@ -72,11 +72,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
-            attribute="data-theme"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>
