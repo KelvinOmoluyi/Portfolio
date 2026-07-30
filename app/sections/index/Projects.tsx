@@ -51,6 +51,7 @@ const webProjects = [
     thumbNail: "/img/Aureter-thumbnail.png",
   },
   ongoing: false,
+  underNDA: true,
   previewLink: "https://aureter.vercel.app/",
 },
   {

@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import { Project } from '@/types/project';
 import Image from 'next/image';
 
@@ -7,6 +9,18 @@ interface ProjectDisplayBoardProps {
 }
 
 const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) => {
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+
+  const handleLinkClick = (e: React.MouseEvent) => {
+    if (project.underNDA) {
+      e.preventDefault();
+      setTooltipPos({ x: e.clientX, y: e.clientY });
+      setShowTooltip(true);
+      setTimeout(() => setShowTooltip(false), 2000);
+    }
+  };
+
   return (
     <div className="projects-display">
         <div className="project-box">
@@ -43,6 +57,11 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                           <h2>Project Ongoing</h2>
                       </div>
                     )}
+                    {project.underNDA && (
+                      <div className="projects-ongoing-watermark">
+                          <h2>Under NDA</h2>
+                      </div>
+                    )}
 
                     <div className="bottom-description-contents">
                         <div className="skill-stack-mention">
@@ -62,11 +81,11 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                             </h5>
                           </div>
                           <div className="cta-container">
-                            <div className="cta">
-                                <a href={project.previewLink} target="_blank" rel="noopener noreferrer"><h6><span>Visit website</span></h6></a>
+                            <div className={`cta ${project.underNDA ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                <a href={project.underNDA ? "#" : project.previewLink} target={project.underNDA ? undefined : "_blank"} rel="noopener noreferrer" onClick={handleLinkClick}><h6><span>Visit website</span></h6></a>
                             </div>
-                            <div className="link">
-                                <a href={project.previewLink} target="_blank">
+                            <div className={`link ${project.underNDA ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                <a href={project.underNDA ? "#" : project.previewLink} target={project.underNDA ? undefined : "_blank"} onClick={handleLinkClick}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
                                         strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link-icon lucide-external-link">
                                         <path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -78,7 +97,7 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                     </div>
                 </div>
                 <div className="media relative">
-                    <a href={project.previewLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+                    <a href={project.underNDA ? "#" : project.previewLink} target={project.underNDA ? undefined : "_blank"} rel="noopener noreferrer" className={`block w-full h-full relative ${project.underNDA ? 'cursor-not-allowed' : ''}`} onClick={handleLinkClick}>
                       <Image 
                         src={project.image.thumbNail} 
                         alt={project.company} 
@@ -89,6 +108,24 @@ const ProjectDisplayBoard: React.FC<ProjectDisplayBoardProps> = ({ project }) =>
                 </div>
             </div>
         </div>
+        {showTooltip && (
+          <div style={{
+            position: 'fixed',
+            top: tooltipPos.y - 40,
+            left: tooltipPos.x,
+            transform: 'translateX(-50%)',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            color: '#fff',
+            padding: '8px 12px',
+            borderRadius: '6px',
+            fontSize: '14px',
+            pointerEvents: 'none',
+            zIndex: 9999,
+            whiteSpace: 'nowrap'
+          }}>
+            This project is not public yet.
+          </div>
+        )}
       </div>
   )
 }

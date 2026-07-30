@@ -12,4 +12,5 @@ export interface Project {
   previewLink: string;
   realWorldProduct?: boolean;
   productProject?: boolean;
+  underNDA?: boolean;
 }
