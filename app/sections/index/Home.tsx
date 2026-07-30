@@ -50,7 +50,7 @@ const Home = () => {
                                 <p>Get In Touch</p>
                             </div>
                         </Link>
-                        <a href="https://drive.google.com/file/d/1NLxJ_69hECciwvnnReMIb9DHK_VCrYQv/view?usp=sharing" target="_blank">
+                        <a href="https://docs.google.com/document/d/1L6CNY4h-m7Tr1TV3JV17BGi30eZqUZ6W8HaDiQintak/edit?usp=sharing" target="_blank">
                             <div className="btn-02">
                                 <p>Get My Resume</p>
                             </div>
