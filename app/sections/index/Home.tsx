@@ -33,8 +33,7 @@ const Home = () => {
                 repeat: Infinity,
                 repeatType: "loop"
             }}
-            />
-
+        />
 
             <div className="hero-section-contents wrapper">
                 <div className="contents-box">

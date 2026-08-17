@@ -27,8 +27,8 @@ const webProjects = [
   realWorldProduct: true,
   previewLink: "https://www.bdkg.media",
 },
-  {
-  company: "Aureter",
+{
+  company: "Auter",
   description: "I architected a <span>multi-tenant recruitment SaaS</span> for HR agencies, backed by <span>PostgreSQL and Supabase</span>. The platform features an <span>AI-powered resume screening pipeline</span>, an <span>RAG recruitment assistant</span>, automated interview scheduling, candidate lifecycle management, and <span>role-based workspaces</span> designed to centralize recruitment operations. I also built an <span>intent-aware retrieval system</span> and <span>context caching layer</span> that significantly reduced database queries while improving AI response performance.",
   keywords: [
     "AI Recruitment",
@@ -46,12 +46,13 @@ const webProjects = [
     "Vite"
   ],
   image: {
-    path: "/img/aureter-logo.png",
-    alt: "Aureter logo",
-    thumbNail: "/img/Aureter-thumbnail.png",
+    path: "/img/auter-logo.png",
+    alt: "Auter logo",
+    thumbNail: "/img/Auter-thumbnail.png",
   },
   ongoing: false,
   underNDA: true,
+  realWorldProduct: true,
   previewLink: "https://aureter.vercel.app/",
 },
   {

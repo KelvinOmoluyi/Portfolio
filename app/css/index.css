@@ -393,6 +393,18 @@ section.projects {
     padding: 5rem 0 10rem;
 }
 
+@keyframes border-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(23, 187, 252, 0.7);
+  }
+  90% {
+    box-shadow: 0 0 0 15px rgba(23, 187, 252, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(23, 187, 252, 0);
+  }
+}
+
 .projects-contents .project-toggle-container label {
     position: relative;
     width: 25rem;
@@ -407,6 +419,7 @@ section.projects {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: border-pulse 1.3s infinite;
 }
 
 .project-toggle-container label p {
